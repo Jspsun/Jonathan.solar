@@ -597,7 +597,7 @@ ul#nav li a:hover {
 .timeline:before {
   background: #11abb0;
   content: '';
-  margin-left: -1px;
+  margin-left: 0px;
   position: absolute;
   top: 0;
   left: 32px;
@@ -746,56 +746,56 @@ ul#nav li a:hover {
    border-radius: 3px 0 0 3px;
 }
 
-.photoshop {
-  background: #1abc9c;
-  width: 60%;
-  	-moz-animation: photoshop 2s ease;
-  	-webkit-animation: photoshop 2s ease;
+.python {
+  background: #3D79AA;
+  width: 90%;
+  	-moz-animation: python 2s ease;
+  	-webkit-animation: python 2s ease;
 }
-.illustrator {
-  background: #e74c3c;
-  	width: 55%;
-  	-moz-animation: illustrator 2s ease;
-  	-webkit-animation: illustrator 2s ease;
+.java {
+  background: #D60000;
+  	width: 80%;
+  	-moz-animation: java 2s ease;
+  	-webkit-animation: java 2s ease;
 }
-.wordpress {
-  background: #34495e;
-  	width: 50%;
-  	-moz-animation: wordpress 2s ease;
-  	-webkit-animation: wordpress 2s ease;
+.cpp {
+  background: #669AD3;
+  	width: 40%;
+  	-moz-animation: cpp 2s ease;
+  	-webkit-animation: cpp 2s ease;
 }
-.css {
-  background: #3498db;
-  	width: 90%;
-  	-moz-animation: css 2s ease;
-  	-webkit-animation: css 2s ease;
+.javascript {
+  background: #D6BA32;
+  	width: 80%;
+  	-moz-animation: javascript 2s ease;
+  	-webkit-animation: javascript 2s ease;
 }
 .html5 {
-  background: #d35400;
-  	width: 80%;
+  background: #F47933;
+  	width: 70%;
   	-moz-animation: html5 2s ease;
   	-webkit-animation: html5 2s ease;
 }
-.jquery {
-  background: #9b59b6;
-  	width: 50%;
-  	-moz-animation: jquery 2s ease;
-  	-webkit-animation: jquery 2s ease;
+.css {
+  background: #008FD5;
+  	width: 70%;
+  	-moz-animation: css 2s ease;
+  	-webkit-animation: css 2s ease;
 }
 
-@-moz-keyframes photoshop {
+@-moz-keyframes python {
   0%   { width: 0px;  }
   100% { width: 60%;  }
 }
-@-moz-keyframes illustrator {
+@-moz-keyframes java {
   0%   { width: 0px;  }
   100% { width: 55%;  }
 }
-@-moz-keyframes wordpress {
+@-moz-keyframes cpp {
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
-@-moz-keyframes css {
+@-moz-keyframes javascript {
   0%   { width: 0px;  }
   100% { width: 90%;  }
 }
@@ -803,24 +803,24 @@ ul#nav li a:hover {
   0%   { width: 0px;  }
   100% { width: 80%;  }
 }
-@-moz-keyframes jquery {
+@-moz-keyframes css {
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
 
-@-webkit-keyframes photoshop {
+@-webkit-keyframes python {
   0%   { width: 0px;  }
   100% { width: 60%;  }
 }
-@-webkit-keyframes illustrator {
+@-webkit-keyframes java {
   0%   { width: 0px;  }
   100% { width: 55%;  }
 }
-@-webkit-keyframes wordpress {
+@-webkit-keyframes cpp {
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
-@-webkit-keyframes css {
+@-webkit-keyframes javascript {
   0%   { width: 0px;  }
   100% { width: 90%;  }
 }
@@ -828,7 +828,7 @@ ul#nav li a:hover {
   0%   { width: 0px;  }
   100% { width: 80%;  }
 }
-@-webkit-keyframes jquery {
+@-webkit-keyframes css {
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
