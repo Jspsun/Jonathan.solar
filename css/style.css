@@ -69,17 +69,16 @@ body { background: #0f0f0f; }
   height:100%;
   z-index:9999;
   background-color:#57BDDB;
-  background: -webkit-linear-gradient(90deg, #0a101c 10%, #0b1120 90%); /* Chrome 10+, Saf5.1+ */
-  background:    -moz-linear-gradient(90deg, #0a101c 10%, #0b1120 90%); /* FF3.6+ */
-  background:     -ms-linear-gradient(90deg, #0a101c 10%, #0b1120 90%); /* IE10 */
-  background:      -o-linear-gradient(90deg, #0a101c 10%, #0b1120 90%); /* Opera 11.10+ */
-  background:         linear-gradient(90deg, #0a101c 10%, #0b1120 90%); /* W3C */
+  background: -webkit-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* W3C */
 
 }
 
-
 .loader {
-  animation: animate 1.5s linear infinite;
+  animation: animate 4s infinite;
   clip: rect(0, 80px, 80px, 40px);
   height: 80px;
   width: 80px;
@@ -98,7 +97,7 @@ body { background: #0f0f0f; }
   }
 }
 .loader:after {
-  animation: animate2 1.5s ease-in-out infinite;
+  animation: animate2 4s infinite;
   clip: rect(0, 80px, 80px, 40px);
   content:'';
   border-radius: 50%;
