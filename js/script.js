@@ -10,9 +10,9 @@
 
   $(window).load(function(){
 
-    $('.loader').fadeOut();    
-    $('#preloader').delay(350).fadeOut('slow');    
-    $('body').delay(350);   
+    $('.loader').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350);
 
     });
 
@@ -24,7 +24,7 @@
 ------------------------------------------------------ */
 
     $("html").niceScroll({
-      cursorcolor:"#11abb0", // Set cursor color
+      cursorcolor:"#ed5565", // Set cursor color
       cursorwidth: "8", // Sety cursor width
       cursorborder: "" // Set cursor border color, default left none
     });
@@ -181,23 +181,23 @@ function parallax() {
 
 
     $(document).ready(function() {
-     
+
     $("#testimonial-slides").owlCarousel({
-     
-    navigation : false, // Show next and prev buttons
+
+    navigation : true, // Show next and prev buttons
     slideSpeed : 300,
     paginationSpeed : 400,
     singleItem:true
-     
+
     // "singleItem:true" is a shortcut for:
     // items : 1,
     // itemsDesktop : false,
     // itemsDesktopSmall : false,
     // itemsTablet: false,
     // itemsMobile : false
-     
+
     });
-     
+
     });
 
 
@@ -207,12 +207,12 @@ function parallax() {
 
     // main directions
       map = new GMaps({
-        el: '#map', lat: 23.790223, lng: 90.414036, zoom: 13, zoomControl : true, 
+        el: '#map', lat: 43.472285, lng: -80.544858, zoom: 16, zoomControl : true,
         zoomControlOpt: { style : 'SMALL', position: 'TOP_LEFT' }, panControl : false, scrollwheel: false
       });
     // add address markers
-    map.addMarker({ lat: 23.790223, lng: 90.414036, title: 'BD InfoSys',
-      infoWindow: { content: '<p>Building # 2, Plot # 111, Road # 35, Gulshan - 2, Dhaka</p>' } });
+    map.addMarker({ lat: 43.472285, lng: -80.544858, title: 'BD InfoSys',
+      infoWindow: { content: '<p><strong>Look! It\'s me</strong></p>' } });
 
 /*----------------------------------------------------*/
 /*	contact form
@@ -242,7 +242,7 @@ function parallax() {
                $('#image-loader').fadeOut();
                $('#message-warning').hide();
                $('#contactForm').fadeOut();
-               $('#message-success').fadeIn();   
+               $('#message-success').fadeIn();
             }
             // There was an error
             else {
@@ -259,11 +259,3 @@ function parallax() {
 
 
 });
-
-
-
-
-
-
-
-
