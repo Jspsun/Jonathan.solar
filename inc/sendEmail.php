@@ -1,7 +1,7 @@
 ﻿<?php
 
 // Replace this with your own email address
-$siteOwnersEmail = 'jonathan.sun@uwaterloo.ca';
+$siteOwnersEmail = 'me@jonathan.solar';
 
 
 if($_POST) {
