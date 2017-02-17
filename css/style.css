@@ -128,11 +128,12 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #161415 url(../images/Bg.png) no-repeat top center;
+   background: #161415 url(../images/Bg.jpg) no-repeat top center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
    overflow: hidden;
+   animation: slide 3s infinite;
 }
 
 /* vertically center banner section */
@@ -186,7 +187,7 @@ header .banner-text hr {
 }
 
 .header-overlay {
-  background: #161415 url(../images/Bg-dark.png) no-repeat top center;
+  background: #161415 url(../images/Bg-dark.jpg) no-repeat top center;
   background-size:  cover!important;
   position: absolute;
   top: 0;
