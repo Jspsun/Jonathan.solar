@@ -78,7 +78,7 @@ body { background: #0f0f0f; }
 }
 
 .loader {
-  animation: animate 4s infinite;
+  animation: animate 4s infinite linear;
   clip: rect(0, 80px, 80px, 40px);
   height: 80px;
   width: 80px;
@@ -97,7 +97,7 @@ body { background: #0f0f0f; }
   }
 }
 .loader:after {
-  animation: animate2 4s infinite;
+  animation: animate2 4s infinite linear;
   clip: rect(0, 80px, 80px, 40px);
   content:'';
   border-radius: 50%;
@@ -128,12 +128,128 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   /*background: #161415 url(../images/Bg.jpg) no-repeat top center;*/
-   background: #161415 url(../images/Header.gif) no-repeat top center;
+   background: url(../images/headers/01.png) no-repeat top center;
    background-size: cover !important;
-	-webkit-background-size: cover !important;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+	 -webkit-background-size: cover !important;
    text-align: center;
    overflow: hidden;
+   animation: animateHeader 30s infinite;
+}
+@keyframes animateHeader {
+  0% {
+    background: url(../images/headers/01.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  8% {
+    background: url(../images/headers/01.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  16% {
+    background: url(../images/headers/02.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  24% {
+    background: url(../images/headers/03.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  32% {
+    background: url(../images/headers/04.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  40% {
+    background: url(../images/headers/05.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  48% {
+    background: url(../images/headers/06.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  56% {
+    background: url(../images/headers/07.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  64% {
+    background: url(../images/headers/08.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  72% {
+    background: url(../images/headers/09.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  80% {
+    background: url(../images/headers/10.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  88% {
+    background: url(../images/headers/11.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  96% {
+    background: url(../images/headers/12.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+  100% {
+  background: url(../images/headers/01.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  }
 }
 
 /* vertically center banner section */
@@ -258,6 +374,7 @@ header .scrolldown a {
    border-radius: 100%;
    -webkit-animation: updown .5s linear 1s infinite alternate; /* Chrome, Safari, Opera */
    animation: updown .5s linear 1s infinite alternate;
+   text-shadow: #000000 0 0 10px;
 
    -webkit-transition: all .3s ease-in-out;
    -moz-transition: all .3s ease-in-out;
