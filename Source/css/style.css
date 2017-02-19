@@ -24,6 +24,7 @@
 
 body { background: #0f0f0f; }
 
+
 .section-title {
   border: 2px solid;
   font-family: "Open Sans",sans-serif;
@@ -56,6 +57,8 @@ body { background: #0f0f0f; }
   position: absolute;
   font-family: "FontAwesome";
 }
+
+
 
 /* ------------------------------------------------------------------ */
 /* 2. Preloader CSS */
@@ -123,6 +126,20 @@ body { background: #0f0f0f; }
 /* 3. Header Styles
 /* ------------------------------------------------------------------ */
 
+#preload-images {background: url(../images/headers/01.png) no-repeat top center,
+                             url(../images/headers/02.png) no-repeat top center,
+                             url(../images/headers/03.png) no-repeat top center,
+                             url(../images/headers/04.png) no-repeat top center,
+                             url(../images/headers/05.png) no-repeat top center,
+                             url(../images/headers/06.png) no-repeat top center,
+                             url(../images/headers/07.png) no-repeat top center,
+                             url(../images/headers/08.png) no-repeat top center,
+                             url(../images/headers/09.png) no-repeat top center,
+                             url(../images/headers/10.png) no-repeat top center,
+                             url(../images/headers/11.png) no-repeat top center,
+                             url(../images/headers/12.png) no-repeat top center;
+                  }
+
 header {
    position: relative;
    height: 800px;
@@ -135,7 +152,7 @@ header {
 	 -webkit-background-size: cover !important;
    text-align: center;
    overflow: hidden;
-   animation: animateHeader 30s infinite;
+   animation: animateHeader 20s infinite;
 }
 @keyframes animateHeader {
   0% {
