@@ -128,12 +128,12 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #161415 url(../images/Bg.jpg) no-repeat top center;
+   /*background: #161415 url(../images/Bg.jpg) no-repeat top center;*/
+   background: #161415 url(../images/Header.gif) no-repeat top center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
    overflow: hidden;
-   animation: slide 3s infinite;
 }
 
 /* vertically center banner section */
@@ -154,12 +154,15 @@ header .banner {
    position: relative;
 }
 
-header .banner-text { width: 100%; }
+header .banner-text { width: 100%;
+text-shadow: #000000 0 0 10px;
+}
 header .banner-text h1 {
    font-family: 'Raleway', sans-serif;
    color: #fff;
    letter-spacing: 2px;
    margin: 0 auto 40px;
+   text-shadow: #EEEE00 0 0 10px;
 }
 
 header .banner-text h1 span {
