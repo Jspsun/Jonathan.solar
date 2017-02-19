@@ -77,7 +77,20 @@ body { background: #0f0f0f; }
   background:     -ms-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* IE10 */
   background:      -o-linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* Opera 11.10+ */
   background:         linear-gradient(90deg, #4CB8C4 10%, #3CD3AD 90%); /* W3C */
-
+}
+#preload-images {background:
+  url(../images/headers/01.png) no-repeat top center,
+   url(../images/headers/02.png) no-repeat top center,
+   url(../images/headers/03.png) no-repeat top center,
+   url(../images/headers/04.png) no-repeat top center,
+   url(../images/headers/05.png) no-repeat top center,
+   url(../images/headers/06.png) no-repeat top center,
+   url(../images/headers/07.png) no-repeat top center,
+   url(../images/headers/08.png) no-repeat top center,
+   url(../images/headers/09.png) no-repeat top center,
+   url(../images/headers/10.png) no-repeat top center,
+   url(../images/headers/11.png) no-repeat top center,
+   url(../images/headers/12.png) no-repeat top center;
 }
 
 .loader {
@@ -125,20 +138,6 @@ body { background: #0f0f0f; }
 /* ------------------------------------------------------------------ */
 /* 3. Header Styles
 /* ------------------------------------------------------------------ */
-
-#preload-images {background: url(../images/headers/01.png) no-repeat top center,
-                             url(../images/headers/02.png) no-repeat top center,
-                             url(../images/headers/03.png) no-repeat top center,
-                             url(../images/headers/04.png) no-repeat top center,
-                             url(../images/headers/05.png) no-repeat top center,
-                             url(../images/headers/06.png) no-repeat top center,
-                             url(../images/headers/07.png) no-repeat top center,
-                             url(../images/headers/08.png) no-repeat top center,
-                             url(../images/headers/09.png) no-repeat top center,
-                             url(../images/headers/10.png) no-repeat top center,
-                             url(../images/headers/11.png) no-repeat top center,
-                             url(../images/headers/12.png) no-repeat top center;
-                  }
 
 header {
    position: relative;
@@ -974,6 +973,16 @@ ul#nav li a:hover {
 /* Technologies
 /* ------------------------------------------------------------------ */
 
+.technologies{
+}
+.technologies ul li{
+  /*margin-bottom: 30px;*/
+  display: block;
+}
+.technologies ul li h3{
+  font-size: 18px !important;
+  /*margin-bottom: 5px;*/
+}
 
 /* ------------------------------------------------------------------ */
 /* Awards/Recognition Section
