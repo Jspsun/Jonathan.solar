@@ -1,6 +1,6 @@
 #Jonathan.Solar - My Personal website
 
-[Seeing it speaks better than any readme can explain](http://jonathan.solar/)
+#[Seeing it speaks better than any readme can explain: Jonathan.Solar](http://jonathan.solar/)
 
 ![demo gif](GitImages/jonathansolar.gif)
 
