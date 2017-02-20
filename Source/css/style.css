@@ -93,18 +93,26 @@ body { background: #0f0f0f; }
    url(../images/headers/12.png) no-repeat top center;
 }
 
+.spinner{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   color: #fffcad;
+}
+
 .loader {
   animation: animate 4s infinite linear;
-  clip: rect(0, 80px, 80px, 40px);
+  /*clip: rect(0, 80px, 80px, 40px);
   height: 80px;
   width: 80px;
   position: absolute;
   left: calc(50% - 40px);
   top: calc(50% - 40px);
-  z-index: 999;
+  z-index: 999;*/
 }
 
-@keyframes animate {
+/*@keyframes animate {
   0% {
     transform: rotate(0deg)
   }
@@ -133,7 +141,7 @@ body { background: #0f0f0f; }
     box-shadow: inset #fffcad 0 0 0 17px;
     transform: rotate(140deg);
   }
-}
+}*/
 
 /* ------------------------------------------------------------------ */
 /* 3. Header Styles
@@ -984,7 +992,7 @@ ul#nav li a:hover {
   font-size: 18px !important;
   margin-bottom: 5px;
 }
-.technologies .important{
+.technologies .valuable{
   font-weight: bold;
   color: #11abb0;
 }
