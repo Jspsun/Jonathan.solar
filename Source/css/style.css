@@ -159,7 +159,7 @@ header {
 	 -webkit-background-size: cover !important;
    text-align: center;
    overflow: hidden;
-   animation: animateHeader 20s infinite;
+   animation: animateHeader 30s infinite;
 }
 @keyframes animateHeader {
   0% {
