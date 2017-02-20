@@ -973,15 +973,20 @@ ul#nav li a:hover {
 /* Technologies
 /* ------------------------------------------------------------------ */
 
-.technologies{
+.technologies h3{
+  font-size: 18px !important;
+  margin-bottom: 5px;
 }
 .technologies ul li{
-  /*margin-bottom: 30px;*/
-  display: block;
+  margin-left: 15px;
 }
 .technologies ul li h3{
   font-size: 18px !important;
-  /*margin-bottom: 5px;*/
+  margin-bottom: 5px;
+}
+.technologies .important{
+  font-weight: bold;
+  color: #11abb0;
 }
 
 /* ------------------------------------------------------------------ */
@@ -1001,7 +1006,6 @@ ul#nav li a:hover {
 .award-list ul li h4 {
   color: #666;
   font-size: 16px !important;
-
 }
 
 
