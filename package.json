@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "animate.css": "^3.5.2",
+    "aphrodite": "^1.2.3",
     "radium": "^0.19.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
