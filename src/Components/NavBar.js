@@ -1,14 +1,13 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import githubLogo from '../Assets/Img/Header/github-logo.svg';
 
 export class NavBar extends React.Component {
   render () {
     return (
       <div className={css(styles.wrapper) + ' animated slideInDown'}>
         <div className={css(styles.titleWrapper)}>
-          <a href='https://github.com/Jspsun' target='_blank'>
-            <img className={css(styles.image)} src={githubLogo} alt='github' href='google.ca' />
+          <a href='https://github.com/Jspsun' target='_blank' rel='noopener noreferrer'>
+            <img className={css(styles.image)} src='Assets/Img/Header/github-logo.svg' alt='github' />
           </a>
           <div className={css(styles.titleText)}>
             Jonathan.Solar
@@ -19,7 +18,7 @@ export class NavBar extends React.Component {
           <a href='#About Me' className={css(styles.navigationItem)}><div>About Me</div></a>
           <a href='#Projects' className={css(styles.navigationItem)}><div>Projects</div></a>
           <a href='#Contact' className={css(styles.navigationItem)}><div>Contact</div></a>
-          <a href='https://medium.com/@jspsun' target='_blank' className={css(styles.navigationItem)}><div>Blog</div></a>
+          <a href='https://medium.com/@jspsun' target='_blank' className={css(styles.navigationItem)} rel='noopener noreferrer'><div>Blog</div></a>
           <a href='./JonathanSunResume.pdf' target='_blank' className={css(styles.navigationItem)}><div>Resume</div></a>
         </div>
 
@@ -31,25 +30,43 @@ export class NavBar extends React.Component {
 const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: '#262C35',
-    height: '100px',
+    // height: '100px',
     boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
     alignItems: 'center',
     display: 'flex',
-    color: '#F6B427'
+    color: '#F6B427',
+    position: 'fixed',
+    width: '100%',
+    flexWrap: 'wrap',
+    flexGrow: 1,
+    padding: '15px',
+    boxSizing: 'border-box',
+    zIndex: 2,
+    '@media (max-width: 870px)': {
+      justifyContent: 'center'
+    }
   },
 
   titleWrapper: {
     fontSize: '40px',
     alignItems: 'center',
-    display: 'flex'
+    display: 'flex',
+
+    '@media (max-width: 870px)': {
+      // display: 'block',
+      textAlign: 'center',
+      marginLeft: 'auto',
+      marginRight: 'auto'
+    }
   },
 
   image: {
     display: 'inline',
-    margin: '15px',
+    // width: '50px',
+    // height: '50px',
+    marginRight: '10px',
     ':hover': {
-      boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
-      color: '#F6B427'
+      fill: '#ffd377'
     }
   },
 
@@ -59,17 +76,30 @@ const styles = StyleSheet.create({
 
   navigationWrapper: {
     display: 'flex',
-    justifyContent: 'space-between',
-    width: '400px',
     marginLeft: 'auto',
-    marginRight: '50px',
-    '@media (max-width: 825px)': {
-      display: 'none'
+    textAlign: 'center',
+
+    '@media (max-width: 870px)': {
+      display: 'block',
+      float: 'none',
+      // marginTop: '20px',
+      marginLeft: '0px'
     }
   },
 
   navigationItem: {
     textDecoration: 'none',
-    color: '#F6B427'
+    color: '#F6B427',
+    display: 'inline-block',
+    marginRight: '25px',
+    marginLeft: '25px',
+
+    '@media (max-width: 870px)': {
+      marginBottom: '5px',
+      marginTop: '5px'
+    },
+    ':hover': {
+      color: '#ffd377'
+    }
   }
 });
