@@ -29,12 +29,12 @@ export class NavBar extends React.Component {
 
 const styles = StyleSheet.create({
   wrapper: {
-    backgroundColor: '#262C35',
-    // height: '100px',
-    boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
+    // boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
+
+    margin: '10px',
     alignItems: 'center',
     display: 'flex',
-    color: '#F6B427',
+    color: '#fff',
     position: 'fixed',
     width: '100%',
     flexWrap: 'wrap',
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
 
   navigationItem: {
     textDecoration: 'none',
-    color: '#F6B427',
+    color: '#fff',
     display: 'inline-block',
     marginRight: '25px',
     marginLeft: '25px',

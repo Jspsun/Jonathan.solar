@@ -2,13 +2,40 @@ import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
 //requires a source, animation duration, orbitradius, size
+
 export class Planet extends React.Component {
   render () {
-    const orbitRadius = {marginLeft: this.props.orbitRadius + 'px'};
+
+    const planetRadius = parseInt(this.props.size, 10);
+    const orbitRadius = parseInt(this.props.orbitRadius, 10);
+    const circleTranslate = -1 * (orbitRadius * 2 + planetRadius / 2) / 2;
+
+    const planetStyle = {
+      width: planetRadius + 'px',
+      height: planetRadius + 'px',
+      marginLeft: orbitRadius + 'px',
+      borderRadius: planetRadius + 'px',
+      background: this.props.background
+    };
+
+    const orbitStyle = {
+      animationDuration: this.props.duration + 's'
+    };
+
+    const circleStyle = {
+      width: (orbitRadius * 2 + planetRadius / 2)+ 'px',
+      height: (orbitRadius * 2 + planetRadius / 2)+ 'px',
+      borderRadius: orbitRadius + 'px',
+      transform: 'translate(' + circleTranslate + 'px, ' + circleTranslate + 'px)'
+    }
+
     return (
       <div>
-        <div className = {css(styles.orbit)} >
-          <img className ={css(styles.planet)} style={orbitRadius} src={this.props.source} alt='Planet' />
+        <div className = {css(styles.circle)} style={circleStyle}>
+          
+        </div>
+        <div className = {css(styles.orbit)} style = {orbitStyle}>
+          <div className = {css(styles.planet)} style = {planetStyle}/> <div/>
         </div>
       </div>
     );
@@ -16,26 +43,26 @@ export class Planet extends React.Component {
 }
 const rotateKeyframes =  { 
   '100%': { 
-    transform: 'rotate(360deg)' 
+    transform: 'rotate(-360deg)' 
   }
 };
 
 const styles = StyleSheet.create({
   planet: {
-    height: '50px',
-    width: '50px',
     position: 'absolute',
-
-    animationName: [rotateKeyframes],
-    animationDuration: '100s',
-    animationIterationCount: 'infinite',
-    animationTimingFunction: 'linear'
   },
 
   orbit: {
     animationName: [rotateKeyframes],
-    animationDuration: '5s',
     animationIterationCount: 'infinite',
     animationTimingFunction: 'linear'
+  },
+
+  circle: {
+    position: 'absolute',
+    border: '1px solid rgba(102, 166, 229, 0.12)'
   }
+
 });
+
+
