@@ -1,11 +1,10 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
-//requires a source, animation duration, orbitradius, size
+// requires a source, animation duration, orbitradius, size
 
 export class Planet extends React.Component {
   render () {
-
     const planetRadius = parseInt(this.props.size, 10);
     const orbitRadius = parseInt(this.props.orbitRadius, 10);
     const circleTranslate = -1 * (orbitRadius * 2 + planetRadius / 2) / 2;
@@ -23,33 +22,32 @@ export class Planet extends React.Component {
     };
 
     const circleStyle = {
-      width: (orbitRadius * 2 + planetRadius / 2)+ 'px',
-      height: (orbitRadius * 2 + planetRadius / 2)+ 'px',
+      width: (orbitRadius * 2 + planetRadius / 2) + 'px',
+      height: (orbitRadius * 2 + planetRadius / 2) + 'px',
       borderRadius: orbitRadius + 'px',
       transform: 'translate(' + circleTranslate + 'px, ' + circleTranslate + 'px)'
-    }
+    };
 
     return (
       <div>
-        <div className = {css(styles.circle)} style={circleStyle}>
-          
+        <div className={css(styles.circle)} style={circleStyle}>
         </div>
-        <div className = {css(styles.orbit)} style = {orbitStyle}>
-          <div className = {css(styles.planet)} style = {planetStyle}/> <div/>
+        <div className={css(styles.orbit)} style={orbitStyle}>
+          <div className={css(styles.planet)} style={planetStyle} /><div />
         </div>
       </div>
     );
   }
 }
-const rotateKeyframes =  { 
-  '100%': { 
-    transform: 'rotate(-360deg)' 
+const rotateKeyframes = {
+  '100%': {
+    transform: 'rotate(-360deg)'
   }
 };
 
 const styles = StyleSheet.create({
   planet: {
-    position: 'absolute',
+    position: 'absolute'
   },
 
   orbit: {
@@ -64,5 +62,3 @@ const styles = StyleSheet.create({
   }
 
 });
-
-

@@ -1,23 +1,63 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
+import {ImageButton} from './UI/ImageButton.js';
+
+var smoothScroll = require('smoothscroll');
+
+var lastKnownScrollPosition = 0;
+var ticking = false;
+var self;
 
 export class NavBar extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = { backgroundColor: 'rgba(22, 31, 44, 0)' };
+
+    self = this;
+    window.addEventListener('scroll', function (e) {
+      lastKnownScrollPosition = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          handleScroll(lastKnownScrollPosition);
+          ticking = false;
+        });
+      }
+      ticking = true;
+    });
+
+    function handleScroll (lastScroll) {
+      var toOpacity = 100;
+      if (lastScroll === 0) {
+        self.setState({ backgroundColor: 'rgba(22, 31, 44, 0)' });
+      } else if (lastScroll < toOpacity) {
+        self.setState({ backgroundColor: 'rgba(22, 31, 44, ' + lastScroll / toOpacity + ')' });
+      }
+      else {
+        self.setState({ backgroundColor: 'rgba(22, 31, 44, 0.95)' });
+      }
+    }
+  }
+
   render () {
+    function scroll (element) {
+      var el = document.querySelector(element);
+      if (el) {
+        smoothScroll(el);
+      }
+    }
     return (
-      <div className={css(styles.wrapper) + ' animated slideInDown'}>
+      <div className={css(styles.wrapper) + ' animated slideInDown'} style={{backgroundColor: this.state.backgroundColor}}>
         <div className={css(styles.titleWrapper)}>
-          <a href='https://github.com/Jspsun' target='_blank' rel='noopener noreferrer'>
-            <img className={css(styles.image)} src='Assets/Img/Header/github-logo.svg' alt='github' />
-          </a>
+          <ImageButton link='https://github.com/Jspsun' width='40px' height='40px' src='Assets/Img/NavBar/github-logo.svg' />
           <div className={css(styles.titleText)}>
             Jonathan.Solar
           </div>
         </div>
 
         <div className={css(styles.navigationWrapper)}>
-          <a href='#About Me' className={css(styles.navigationItem)}><div>About Me</div></a>
-          <a href='#Projects' className={css(styles.navigationItem)}><div>Projects</div></a>
-          <a href='#Contact' className={css(styles.navigationItem)}><div>Contact</div></a>
+          <div className={css(styles.navigationItem)} onClick={() => scroll('#About-Me')} >About Me</div>
+          <div className={css(styles.navigationItem)} onClick={() => scroll('#Projects')}>Projects</div>
+          <div className={css(styles.navigationItem)} onClick={() => scroll('#Contact')}>Contact</div>
           <a href='https://medium.com/@jspsun' target='_blank' className={css(styles.navigationItem)} rel='noopener noreferrer'><div>Blog</div></a>
           <a href='./JonathanSunResume.pdf' target='_blank' className={css(styles.navigationItem)}><div>Resume</div></a>
         </div>
@@ -31,19 +71,19 @@ const styles = StyleSheet.create({
   wrapper: {
     // boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
 
-    margin: '10px',
+    // margin: '10px',
+    width: '100%',
     alignItems: 'center',
     display: 'flex',
     color: '#fff',
     position: 'fixed',
-    width: '100%',
     flexWrap: 'wrap',
     flexGrow: 1,
     padding: '15px',
-    boxSizing: 'border-box',
     zIndex: 2,
-    '@media (max-width: 870px)': {
-      justifyContent: 'center'
+    '@media (max-width: 877px)': {
+      justifyContent: 'center',
+      width: 'auto'
     }
   },
 
@@ -52,7 +92,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     display: 'flex',
 
-    '@media (max-width: 870px)': {
+    '@media (max-width: 877px)': {
       // display: 'block',
       textAlign: 'center',
       marginLeft: 'auto',
@@ -61,16 +101,11 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    display: 'inline',
-    // width: '50px',
-    // height: '50px',
-    marginRight: '10px',
-    ':hover': {
-      fill: '#ffd377'
-    }
+    display: 'inline'
   },
 
   titleText: {
+    marginLeft: '10px',
     display: 'inline'
   },
 
@@ -78,8 +113,10 @@ const styles = StyleSheet.create({
     display: 'flex',
     marginLeft: 'auto',
     textAlign: 'center',
+    paddingRight: '20px',
+    paddingLeft: '20px',
 
-    '@media (max-width: 870px)': {
+    '@media (max-width: 877px)': {
       display: 'block',
       float: 'none',
       // marginTop: '20px',
@@ -94,12 +131,13 @@ const styles = StyleSheet.create({
     marginRight: '25px',
     marginLeft: '25px',
 
-    '@media (max-width: 870px)': {
+    '@media (max-width: 877px)': {
       marginBottom: '5px',
       marginTop: '5px'
     },
     ':hover': {
-      color: '#ffd377'
+      color: '#ffd377',
+      cursor: 'pointer'
     }
   }
 });
