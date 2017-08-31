@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    overflowX: 'hidden'
   }
 });
 

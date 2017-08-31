@@ -33,7 +33,7 @@ export class NavBar extends React.Component {
         self.setState({ backgroundColor: 'rgba(22, 31, 44, ' + lastScroll / toOpacity + ')' });
       }
       else {
-        self.setState({ backgroundColor: 'rgba(22, 31, 44, 0.95)' });
+        self.setState({ backgroundColor: 'rgba(22, 31, 44, 0.99)' });
       }
     }
   }

@@ -23,7 +23,7 @@ export class AboutMe extends React.Component {
 const styles = StyleSheet.create({
   wrapper: {
     width: '100%',
-    height: '100vh',
+    // height: '100vh',
     overflow: 'hidden',
     display: 'flex',
     flexDirection: 'column',

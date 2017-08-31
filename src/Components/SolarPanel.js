@@ -33,8 +33,12 @@ const styles = StyleSheet.create({
     height: '100vh',
     overflow: 'hidden',
     display: 'flex',
-
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginTop: '25px',
+
+    '@media (max-width: 877px)': {
+      marginTop: '60px'
+    }
   }
 });
