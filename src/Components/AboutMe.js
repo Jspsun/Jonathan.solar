@@ -25,11 +25,11 @@ export class AboutMe extends React.Component {
 const styles = StyleSheet.create({
   wrapper: {
     width: '100%',
-    // height: '100vh',
-    display: 'flex',
+    height: 'auto',
     flexDirection: 'column',
     paddingTop: '70px',
-    flexGrow: '1',
+    overflowY: 'auto',
+    overflowX: 'hidden',
     '@media (max-width: 877px)': {
       paddingTop: '120px'
     }

@@ -26,13 +26,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'column',
 
-    marginTop: '100px'
+    marginTop: '80px'
   },
 
   title: {
+    marginLeft: '20px',
+    marginRight: '20px',
     fontSize: '40px',
     color: '#fff',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    textAlign: 'justify',
+    textAlignLast: 'center'
   },
 
   buttonWrapper: {
@@ -42,7 +46,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    margin: '20px',
+    margin: '30px',
     padding: '10px'
   },
 
@@ -50,8 +54,7 @@ const styles = StyleSheet.create({
     width: '200px',
     height: '75px',
     fontSize: '20px',
-    marginTop: '10px',
-    marginBottom: '10px',
+    margin: '10px',
     flexShrink: '1'
   }
 });
