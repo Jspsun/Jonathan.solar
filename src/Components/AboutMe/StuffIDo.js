@@ -1,0 +1,57 @@
+import React from 'react';
+import { StyleSheet, css } from 'aphrodite';
+import {TextButton} from '../UI/TextButton.js';
+
+export class StuffIDo extends React.Component {
+  render () {
+    return (
+      <div className={css(styles.wrapper)}>
+        <div className={css(styles.title)}>Check out some of the cool stuff I do!</div>
+        <div className={css(styles.buttonWrapper)}>
+          <TextButton className={styles.button} text='Drones' href='https://www.youtube.com/channel/UCobkvnXKkRl-eTIQxBdpCPA?view_as=subscriber' color='#fff' hoverColor='#ffd377' />
+          <TextButton className={styles.button} text='Blog' href='https://medium.com/@jspsun' color='#fff' hoverColor='#ffd377' />
+          <TextButton className={styles.button} text='Music' href='https://open.spotify.com/user/jspsun' color='#fff' hoverColor='#ffd377' />
+          <TextButton className={styles.button} text='Hackathons' href='https://devpost.com/jspsun' color='#fff' hoverColor='#ffd377' />
+        </div>
+      </div>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+
+  wrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+
+    marginTop: '100px'
+  },
+
+  title: {
+    fontSize: '40px',
+    color: '#fff',
+    alignSelf: 'center'
+  },
+
+  buttonWrapper: {
+    width: '100%',
+    height: '75px',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    margin: '20px',
+    padding: '10px'
+  },
+
+  button: {
+    width: '200px',
+    height: '75px',
+    fontSize: '20px',
+    marginTop: '10px',
+    marginBottom: '10px',
+    flexShrink: '1'
+  }
+});

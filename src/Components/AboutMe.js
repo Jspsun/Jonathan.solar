@@ -4,17 +4,19 @@ import {StarField} from './SolarSystem/StarField.js';
 import {MediaBar} from './AboutMe/MediaBar.js';
 import {Photo} from './AboutMe/Photo.js';
 import {AboutMeCard} from './AboutMe/AboutMeCard.js';
+import {StuffIDo} from './AboutMe/StuffIDo.js';
 
 export class AboutMe extends React.Component {
   render () {
     return (
       <div id='About-Me' className={css(styles.wrapper)}>
         <StarField noOfStars='140' />
-        <MediaBar />
+        {/* <MediaBar /> */}
         <div className={css(styles.inline)}>
           <Photo />
           <AboutMeCard />
         </div>
+        <StuffIDo />
       </div>
     );
   }
@@ -24,11 +26,13 @@ const styles = StyleSheet.create({
   wrapper: {
     width: '100%',
     // height: '100vh',
-    overflow: 'hidden',
     display: 'flex',
     flexDirection: 'column',
-    paddingTop: '120px',
-    flexGrow: '1'
+    paddingTop: '70px',
+    flexGrow: '1',
+    '@media (max-width: 877px)': {
+      paddingTop: '120px'
+    }
   },
 
   inline: {

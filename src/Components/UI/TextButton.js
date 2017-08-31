@@ -36,7 +36,7 @@ export class TextButton extends React.Component {
 
     return (
       <a className={css(styles.a)} href={this.props.href} target='__blank'>
-        <div className={css(styles.button, this.props.style)}>
+        <div className={css(styles.button, this.props.className)}>
           <div className={css(styles.text)}>{this.props.text}</div>
         </div>
       </a>
