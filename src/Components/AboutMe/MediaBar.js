@@ -11,7 +11,7 @@ export class MediaBar extends React.Component {
         <ImageButton link='https://www.linkedin.com/in/jonathan-sun/' width='50px' height='50px' src='Assets/Img/MediaBar/linkedin-logo.svg' />
         <ImageButton link='https://medium.com/@jspsun' width='50px' height='50px' src='Assets/Img/MediaBar/medium.svg' />
         <ImageButton link='https://www.youtube.com/channel/UCobkvnXKkRl-eTIQxBdpCPA' width='50px' height='50px' src='Assets/Img/MediaBar/youtube-logo.svg' />
-      </MaterialCard>
+      </ MaterialCard>
     );
   }
 }

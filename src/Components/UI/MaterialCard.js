@@ -14,7 +14,7 @@ export class MaterialCard extends React.Component {
 const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: '#fff',
-    borderRadius: '2px',
-    boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
+    borderRadius: '4px',
+    boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)'
   }
 });

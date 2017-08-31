@@ -1,18 +1,23 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import {MaterialCard} from '../UI/MaterialCard.js';
+import {TextButton} from '../UI/TextButton.js';
 
 export class AboutMeCard extends React.Component {
   render () {
     return (
       <MaterialCard style={styles.card} >
         <div className={css(styles.header)}>About Me</div>
-        {/* <p>I’m a student at the University of Waterloo studying
-Computer Engineering. Currently a full-stack
-developer at Videostream.
-
-When I’m not at in class, I’m usually at a hackathon,
-flying my drone or riding my Boosted Board</p> */}
+        <p className={css(styles.p)}>
+          I’m a Computer Engineering student at the University of Waterloo and currently a full-stack developer at 
+          <a className={css(styles.link)} href='http://getvideostream.com/' target='__blank'> Videostream!</a>
+          <br />
+          <br />
+          When I’m not in class, I’m usually at a hackathon, flying my drone or riding my Boosted Board
+        </p>
+        <div className={css(styles.buttonWrapper)}>
+          <TextButton text='Resume' href='./JonathanSunResume.pdf' color='#000' hoverColor='#ffd377' />
+        </div>
       </MaterialCard>
     );
   }
@@ -20,16 +25,37 @@ flying my drone or riding my Boosted Board</p> */}
 
 const styles = StyleSheet.create({
   card: {
-    width: '600px',
+    width: '550px',
     height: '400px',
     margin: '20px 20px 20px 20px',
-    padding: '30px',
 
-    justifyContent: 'center',
-    // alignItems: 'center'
+    flexDirection: 'column',
+    display: 'flex',
+    alignItems: 'center'
   },
 
   header: {
+    marginTop: '50px',
     fontSize: '40px'
+  },
+
+  p: {
+    fontSize: '20px',
+    marginLeft: '50px',
+    marginRight: '50px',
+    marginBottom: '0px'
+  },
+
+  link: {
+    textDecoration: 'none',
+    color: '#EA6325'
+  },
+
+  buttonWrapper: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: '1',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
