@@ -15,7 +15,7 @@ export class AboutMeCard extends React.Component {
           <br />
           When I’m not in class, I’m usually at a hackathon, flying my drone or riding my Boosted Board
         </p>
-        <div className={css(styles.buttonWrapper)}>
+        <div className={css(styles.centerWrapper)}>
           <TextButton text='Resume' href='./JonathanSunResume.pdf' color='#000' hoverColor='#ffd377' />
         </div>
       </MaterialCard>
@@ -26,9 +26,9 @@ export class AboutMeCard extends React.Component {
 const styles = StyleSheet.create({
   card: {
     width: '550px',
-    height: '400px',
+    // height: '400px',
     margin: '20px 20px 20px 20px',
-
+    overflow: 'auto',
     flexDirection: 'column',
     display: 'flex',
     alignItems: 'center'
@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
     color: '#EA6325'
   },
 
-  buttonWrapper: {
+  centerWrapper: {
+    padding: '30px',
     display: 'flex',
     flexDirection: 'column',
     flexGrow: '1',

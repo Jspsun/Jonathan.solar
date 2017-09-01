@@ -27,6 +27,10 @@ const styles = StyleSheet.create({
     height: '100%',
     position: 'absolute',
     alignSelf: 'flex-start',
-    zIndex: '-2'
+    zIndex: '-2',
+
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: '1'
   }
 });

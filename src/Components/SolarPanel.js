@@ -3,13 +3,11 @@ import { StyleSheet, css } from 'aphrodite';
 import {Sun} from './SolarSystem/Sun.js';
 import {Planet} from './SolarSystem/Planet.js';
 import {AstroidBelt} from './SolarSystem/AstroidBelt.js';
-import {StarField} from './SolarSystem/StarField.js';
 
 export class SolarPanel extends React.Component {
   render () {
     return (
       <div className={css(styles.wrapper)}>
-        <StarField noOfStars='140' />
         <Sun />
         <Planet background='#9f5e26' orbitRadius='50' size='5' duration='14' /> {/*mercury*/}
         <Planet background='#BEB768' orbitRadius='70' size='8' duration='15' /> {/*venus*/}

@@ -142,6 +142,7 @@ const styles = StyleSheet.create({
     display: 'inline-block',
     marginRight: '25px',
     marginLeft: '25px',
+    transition: 'color 0.5s ease',
 
     '@media (max-width: 877px)': {
       marginBottom: '5px',

@@ -7,7 +7,7 @@ export class TextButton extends React.Component {
       a: {
         textDecoration: 'none',
         color: this.props.color,
-        fontWeight: '500'
+        fontWeight: '500',
       },
 
       button: {
@@ -23,6 +23,7 @@ export class TextButton extends React.Component {
         border: '2px solid',
         color: this.props.color,
         borderColor: this.props.color,
+        transition: 'all 0.5s ease',
 
         ':hover': {
           color: this.props.hoverColor,

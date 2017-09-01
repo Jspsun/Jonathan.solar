@@ -36,12 +36,15 @@ const styles = StyleSheet.create({
     color: '#fff',
     alignSelf: 'center',
     textAlign: 'justify',
-    textAlignLast: 'center'
+    textAlignLast: 'center',
+    '@media (max-width: 877px)': {
+      fontSize: '30px'
+    }
   },
 
   buttonWrapper: {
     width: '100%',
-    height: '75px',
+    height: 'auto',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-evenly',
