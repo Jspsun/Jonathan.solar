@@ -25,7 +25,6 @@ export class AboutMe extends React.Component {
 const styles = StyleSheet.create({
   wrapper: {
     width: '100%',
-    // height: 'auto',
     flexDirection: 'column',
     paddingTop: '70px',
 

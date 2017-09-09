@@ -5,8 +5,8 @@ import {MaterialCard} from '../UI/MaterialCard.js';
 export class Photo extends React.Component {
   render () {
     return (
-      <MaterialCard style={styles.wrapper} >
-        <img className={css(styles.img)} src='Assets/Img/AboutMe/JonathanHeadshot.jpeg' alt='Headshot' />
+      <MaterialCard className={styles.wrapper} >
+        <img className={css(styles.img)} src='Assets/Img/AboutMe/JonathanHeadshot.jpg' alt='Headshot' />
       </MaterialCard>
     );
   }

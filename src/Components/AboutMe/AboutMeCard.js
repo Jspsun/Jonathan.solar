@@ -6,17 +6,17 @@ import {TextButton} from '../UI/TextButton.js';
 export class AboutMeCard extends React.Component {
   render () {
     return (
-      <MaterialCard style={styles.card} >
+      <MaterialCard className={styles.card} >
         <div className={css(styles.header)}>About Me</div>
         <p className={css(styles.p)}>
-          I’m a Computer Engineering student at the University of Waterloo and currently a full-stack developer at 
-          <a className={css(styles.link)} href='http://getvideostream.com/' target='__blank'> Videostream!</a>
+          I’m a Computer Engineering student at the University of Waterloo and currently a backend developer at 
+          <a className={css(styles.link)} href='https://www.thalmic.com/' target='__blank'> Thalmic Labs!</a>
           <br />
           <br />
           When I’m not in class, I’m usually at a hackathon, flying my drone or riding my Boosted Board
         </p>
         <div className={css(styles.centerWrapper)}>
-          <TextButton text='Resume' href='./JonathanSunResume.pdf' color='#000' hoverColor='#ffd377' />
+          <TextButton text='Resume' href='./JonathanSunResume.pdf' color='#fff' hoverColor='#ffd377' />
         </div>
       </MaterialCard>
     );
@@ -26,7 +26,6 @@ export class AboutMeCard extends React.Component {
 const styles = StyleSheet.create({
   card: {
     width: '550px',
-    // height: '400px',
     margin: '20px 20px 20px 20px',
     overflow: 'auto',
     flexDirection: 'column',
@@ -48,7 +47,7 @@ const styles = StyleSheet.create({
 
   link: {
     textDecoration: 'none',
-    color: '#EA6325'
+    color: '#43B7DC'
   },
 
   centerWrapper: {
