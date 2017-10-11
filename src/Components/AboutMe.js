@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import {StarField} from './SolarSystem/StarField.js';
-import {MediaBar} from './AboutMe/MediaBar.js';
 import {Photo} from './AboutMe/Photo.js';
 import {AboutMeCard} from './AboutMe/AboutMeCard.js';
 import {StuffIDo} from './AboutMe/StuffIDo.js';

@@ -8,7 +8,7 @@ export class Projects extends React.Component {
   render () {
     var projectCategoriesList=[];
     for (const key of Object.keys(projectCategoriesJson)) {
-      projectCategoriesList.push(<ProjectCategory title={key} data={projectCategoriesJson[key]} />);
+      projectCategoriesList.push(<ProjectCategory key={Math.random()} title={key} data={projectCategoriesJson[key]} />);
     }
 
     return (
@@ -101,7 +101,7 @@ const projectCategoriesJson = {
       src: 'Assets/Img/Projects/EmployHer.png',
       title: 'EmployHer',
       technologies: 'JavaScript, HTML, CSS, Firebase, Twilio API',
-      bodyText: 'At <\Br/eak>Inequality 2016 we were challenged to create a project that could make an impact in the lives of Bangladeshi women. The challenge was to do it given that users only had access to sms-enabled phones (no internet). \n We came up with a job matching service that lets Women get matched to empowering work opportunities via sms. We created a sms-connected database, sms server as well as a website for employers to find their perfect employee.',
+      bodyText: 'At <\\Br/eak>Inequality 2016 we were challenged to create a project that could make an impact in the lives of Bangladeshi women. The challenge was to do it given that users only had access to sms-enabled phones (no internet). \n We came up with a job matching service that lets Women get matched to empowering work opportunities via sms. We created a sms-connected database, sms server as well as a website for employers to find their perfect employee.',
       gitLink: 'https://github.com/Jspsun/employHer.git'
     }
   ],

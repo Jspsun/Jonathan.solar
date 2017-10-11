@@ -6,8 +6,6 @@ import {SolarPanel} from './Components/SolarPanel.js';
 import {AboutMe} from './Components/AboutMe.js';
 import {Projects} from './Components/Projects.js';
 
-import {ProjectCategory} from './Components/Projects/ProjectCategory.js';
-
 class App extends Component {
   render () {
     return (

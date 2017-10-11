@@ -21,7 +21,7 @@ export class ProjectCard extends React.Component {
     var bodyText = []
     const text = data.bodyText.split('\n');
     for (var i=0; i<text.length; i++) {
-      bodyText.push(<p className={css(styles.bodyText)}>{text[i]}</p>)
+      bodyText.push(<p className={css(styles.bodyText)} key={Math.random()} >{text[i]}</p>)
     }
 
     function StyledImages (props) {
@@ -44,7 +44,7 @@ export class ProjectCard extends React.Component {
         return null;
       }
       return (
-        <TextButton text='Live Demo' href={props.demoLink} color='#fff' hoverColor='#ffd377' />
+        <TextButton text='Live Demo' style={{margin: '0px 20px 0px 20px'}} href={props.demoLink} color='#fff' hoverColor='#ffd377' />
       );
     }
 
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   card: {
     width: '80%',
     height: 'auto',
-    margin: '20px 20px 20px 20px',
+    margin: '0px 20px 20px 20px',
     overflow: 'auto',
     flexDirection: 'row',
     display: 'flex',
@@ -89,12 +89,13 @@ const styles = StyleSheet.create({
     width: '500px',
     display: 'flex',
     flexDirection: 'column',
-    padding: '30px'
+    // padding: '30px'
   },
 
   title: {
-    marginTop: '50px',
-    fontSize: '40px'
+    // marginTop: '50px',
+    fontSize: '40px',
+    fontWeight: '900'
   },
 
   technologies: {
@@ -110,13 +111,13 @@ const styles = StyleSheet.create({
   },
 
   buttonWrapper: {
-    padding: '30px',
-    height: '100px',
+    paddingTop: '30px',
+    // height: '100px',
     display: 'flex',
     flexDirection: 'row',
     // flexGrow: '1',
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
     // flexWrap: 'wrap',
   }
 });
