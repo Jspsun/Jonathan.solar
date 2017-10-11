@@ -11,7 +11,7 @@ export class ProjectCategory extends React.Component {
     var projects = [];
     var data = this.props.data;
     for (var i = 0; i < data.length; i++) {
-      projects.push(<ProjectCard className={styles.card} data={data} />);
+      projects.push(<ProjectCard className={styles.card} data={data[i]} />);
     }
 
     return (

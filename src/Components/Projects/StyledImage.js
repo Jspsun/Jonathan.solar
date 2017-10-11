@@ -2,24 +2,22 @@ import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
 /**
- * accept img source as well as a link
+ * accept img source
  */
 export class StyledImage extends React.Component {
   render () {
     return (
-      <a>
-        <img className={css(styles.img, this.props.style)} src={this.props.src} />
-      </a>
+      // <a>
+        <img className={css(styles.img)} src={this.props.src} />
+      // </a>
     );
   }
 }
 
 const styles = StyleSheet.create({
   img: {
-    position: 'absolute',
     width: '400px',
-    ':hover': {
-      zIndex: '5'
-    }
+    maxHeight: '400px',
+    transform: 'translateY(-50px)'
   }
 });

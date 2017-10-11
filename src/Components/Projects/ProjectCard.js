@@ -18,6 +18,12 @@ export class ProjectCard extends React.Component {
   render () {
     var data = this.props.data;
 
+    var bodyText = []
+    const text = data.bodyText.split('\n');
+    for (var i=0; i<text.length; i++) {
+      bodyText.push(<p className={css(styles.bodyText)}>{text[i]}</p>)
+    }
+
     function StyledImages (props) {
       return (
         <StyledImage src={props.src} href={props.href} />
@@ -48,9 +54,7 @@ export class ProjectCard extends React.Component {
         <div className={css(styles.textWrapper)}>
           <div className={css(styles.title)}>{data.title}</div>
           <div className={css(styles.technologies)}>{data.technologies}</div>
-          <p className={css(styles.bodyText)}>
-            {data.bodyText}
-          </p>
+          {bodyText}
           <div className={css(styles.buttonWrapper)}>
             <GitButton gitLink={data.gitLink} />
             <DemoButton demoLink={data.demoLink} />
@@ -63,24 +67,29 @@ export class ProjectCard extends React.Component {
 
 const styles = StyleSheet.create({
   card: {
-    width: '1000px',
-    height: '500px',
+    width: '80%',
+    height: 'auto',
     margin: '20px 20px 20px 20px',
     overflow: 'auto',
-    flexDirection: 'column',
+    flexDirection: 'row',
     display: 'flex',
-    alignItems: 'center',
+    flex: '1 1 auto',
+    flexWrap: 'wrap',
     padding: '40px',
-
+    alignItems:'center',
+    justifyContent: 'center',
     color: '#fff'
   },
 
   imgWrapper: {
-
+    display: 'flex',
   },
 
   textWrapper: {
-
+    width: '500px',
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '30px'
   },
 
   title: {
@@ -90,8 +99,6 @@ const styles = StyleSheet.create({
 
   technologies: {
     fontSize: '20px',
-    marginLeft: '50px',
-    marginRight: '50px',
     marginBottom: '0px'
   },
 
@@ -104,10 +111,12 @@ const styles = StyleSheet.create({
 
   buttonWrapper: {
     padding: '30px',
+    height: '100px',
     display: 'flex',
-    flexDirection: 'column',
-    flexGrow: '1',
+    flexDirection: 'row',
+    // flexGrow: '1',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    // flexWrap: 'wrap',
   }
 });

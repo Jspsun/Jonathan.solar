@@ -9,13 +9,15 @@ export class Planet extends React.Component {
     const orbitRadius = parseInt(this.props.orbitRadius, 10);
     const circleTranslate = -1 * (orbitRadius * 2 + planetRadius / 2) / 2;
 
-    const planetStyle = {
-      width: planetRadius + 'px',
-      height: planetRadius + 'px',
-      marginLeft: orbitRadius + 'px',
-      borderRadius: planetRadius + 'px',
-      background: this.props.background
-    };
+    const style = StyleSheet.create({
+      planetStyle: {
+        width: planetRadius + 'px',
+        height: planetRadius + 'px',
+        marginLeft: orbitRadius + 'px',
+        borderRadius: planetRadius + 'px',
+        background: this.props.background
+      }
+    });
 
     const orbitStyle = {
       animationDuration: this.props.duration + 's'
@@ -33,7 +35,7 @@ export class Planet extends React.Component {
         <div className={css(styles.circle)} style={circleStyle}>
         </div>
         <div className={css(styles.orbit)} style={orbitStyle}>
-          <div className={css(styles.planet)} style={planetStyle} /><div />
+          <div className={css(styles.planet, style.planetStyle)} style={this.props.style}/><div />
         </div>
       </div>
     );
