@@ -1,0 +1,24 @@
+{
+  "name": "jonathan.solar",
+  "version": "3.0.0",
+  "description": "Personal site for Jonathan Sun",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jspsun/Jonathan.solar.git"
+  },
+  "author": "Jonathan Sun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jspsun/Jonathan.solar/issues"
+  },
+  "homepage": "https://github.com/Jspsun/Jonathan.solar#readme",
+  "dependencies": {
+    "next": "^4.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
