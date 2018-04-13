@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import {NavBar} from './Components/NavBar.js';
+import { NavBar } from './Components/NavBar.js';
 import {StarField} from './Components/SolarSystem/StarField.js';
 import {SolarPanel} from './Components/SolarPanel.js';
 import {AboutMe} from './Components/AboutMe.js';
@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     overflowY: 'visible',
-    overflowX: 'hidden'
-  }
+    overflowX: 'hidden',
+  },
 });
 
 export default App;
