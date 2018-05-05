@@ -71,7 +71,7 @@ export class NavBar extends React.Component {
           <div className={css(styles.navigationItem)} onClick={() => scroll('#Projects')}>Projects</div>
           <div className={css(styles.navigationItem)} onClick={() => scroll('#Contact')}>Contact</div>
           <a href='https://medium.com/@jspsun' target='_blank' className={css(styles.navigationItem)} rel='noopener noreferrer'><div>Blog</div></a>
-          <a href='./JonathanSunResume.pdf' target='_blank' className={css(styles.navigationItem)}><div>Resume</div></a>
+          {/* <a href='./JonathanSunResume.pdf' target='_blank' className={css(styles.navigationItem)}><div>Resume</div></a> */}
         </div>
 
       </div>

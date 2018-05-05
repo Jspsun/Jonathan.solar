@@ -9,14 +9,16 @@ export class AboutMeCard extends React.Component {
       <MaterialCard className={styles.card} >
         <div className={css(styles.header)}>About Me</div>
         <p className={css(styles.p)}>
-          I’m a Computer Engineering student at the University of Waterloo and currently a backend developer at 
-          <a className={css(styles.link)} href='https://www.thalmic.com/' target='__blank'> Thalmic Labs!</a>
+          I’m a Computer Engineering student at the University of Waterloo and most recently an engineer at
+          <a className={css(styles.link)} href='https://squareup.com' target='__blank'> Square </a>
+          working on the
+          <a className={css(styles.link)} href='https://cash.app/' target='__blank'> Cash App! </a>
           <br />
           <br />
           When I’m not in class, I’m usually at a hackathon, flying my drone or riding my Boosted Board
         </p>
         <div className={css(styles.centerWrapper)}>
-          <TextButton text='Resume' href='./JonathanSunResume.pdf' color='#fff' hoverColor='#ffd377' />
+          {/* <TextButton text='Resume' href='./JonathanSunResume.pdf' color='#fff' hoverColor='#ffd377' /> */}
         </div>
       </MaterialCard>
     );
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
 
   link: {
     textDecoration: 'none',
-    color: '#43B7DC'
+    color: '#FFA500'
   },
 
   centerWrapper: {
